@@ -275,6 +275,25 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GGTableAdapter" GeneratorDataComponentClassName="GGTableAdapter" Name="GG" UserDataComponentName="GGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="St25ConnectionString (Settings)" DbObjectName="St25.dbo.GG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT maker, model, Expr1, price FROM dbo.GG</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="maker" DataSetColumn="maker" />
+              <Mapping SourceColumn="model" DataSetColumn="model" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -283,7 +302,7 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
   <xs:element name="St25DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="St25DataSet" msprop:Generator_UserDSName="St25DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Laptop" msprop:Generator_TableClassName="LaptopDataTable" msprop:Generator_TableVarName="tableLaptop" msprop:Generator_TablePropName="Laptop" msprop:Generator_RowDeletingName="LaptopRowDeleting" msprop:Generator_RowChangingName="LaptopRowChanging" msprop:Generator_RowEvHandlerName="LaptopRowChangeEventHandler" msprop:Generator_RowDeletedName="LaptopRowDeleted" msprop:Generator_UserTableName="Laptop" msprop:Generator_RowChangedName="LaptopRowChanged" msprop:Generator_RowEvArgName="LaptopRowChangeEvent" msprop:Generator_RowClassName="LaptopRow">
+        <xs:element name="Laptop" msprop:Generator_TableClassName="LaptopDataTable" msprop:Generator_TableVarName="tableLaptop" msprop:Generator_RowChangedName="LaptopRowChanged" msprop:Generator_TablePropName="Laptop" msprop:Generator_RowDeletingName="LaptopRowDeleting" msprop:Generator_RowChangingName="LaptopRowChanging" msprop:Generator_RowEvHandlerName="LaptopRowChangeEventHandler" msprop:Generator_RowDeletedName="LaptopRowDeleted" msprop:Generator_RowClassName="LaptopRow" msprop:Generator_UserTableName="Laptop" msprop:Generator_RowEvArgName="LaptopRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:int" />
@@ -302,7 +321,7 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PC" msprop:Generator_TableClassName="PCDataTable" msprop:Generator_TableVarName="tablePC" msprop:Generator_TablePropName="PC" msprop:Generator_RowDeletingName="PCRowDeleting" msprop:Generator_RowChangingName="PCRowChanging" msprop:Generator_RowEvHandlerName="PCRowChangeEventHandler" msprop:Generator_RowDeletedName="PCRowDeleted" msprop:Generator_UserTableName="PC" msprop:Generator_RowChangedName="PCRowChanged" msprop:Generator_RowEvArgName="PCRowChangeEvent" msprop:Generator_RowClassName="PCRow">
+        <xs:element name="PC" msprop:Generator_TableClassName="PCDataTable" msprop:Generator_TableVarName="tablePC" msprop:Generator_RowChangedName="PCRowChanged" msprop:Generator_TablePropName="PC" msprop:Generator_RowDeletingName="PCRowDeleting" msprop:Generator_RowChangingName="PCRowChanging" msprop:Generator_RowEvHandlerName="PCRowChangeEventHandler" msprop:Generator_RowDeletedName="PCRowDeleted" msprop:Generator_RowClassName="PCRow" msprop:Generator_UserTableName="PC" msprop:Generator_RowEvArgName="PCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:int" />
@@ -327,7 +346,7 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Printer" msprop:Generator_TableClassName="PrinterDataTable" msprop:Generator_TableVarName="tablePrinter" msprop:Generator_TablePropName="Printer" msprop:Generator_RowDeletingName="PrinterRowDeleting" msprop:Generator_RowChangingName="PrinterRowChanging" msprop:Generator_RowEvHandlerName="PrinterRowChangeEventHandler" msprop:Generator_RowDeletedName="PrinterRowDeleted" msprop:Generator_UserTableName="Printer" msprop:Generator_RowChangedName="PrinterRowChanged" msprop:Generator_RowEvArgName="PrinterRowChangeEvent" msprop:Generator_RowClassName="PrinterRow">
+        <xs:element name="Printer" msprop:Generator_TableClassName="PrinterDataTable" msprop:Generator_TableVarName="tablePrinter" msprop:Generator_RowChangedName="PrinterRowChanged" msprop:Generator_TablePropName="Printer" msprop:Generator_RowDeletingName="PrinterRowDeleting" msprop:Generator_RowChangingName="PrinterRowChanging" msprop:Generator_RowEvHandlerName="PrinterRowChangeEventHandler" msprop:Generator_RowDeletedName="PrinterRowDeleted" msprop:Generator_RowClassName="PrinterRow" msprop:Generator_UserTableName="Printer" msprop:Generator_RowEvArgName="PrinterRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:int" />
@@ -356,7 +375,7 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_UserTableName="Product" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_RowEvArgName="ProductRowChangeEvent" msprop:Generator_RowClassName="ProductRow">
+        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_RowClassName="ProductRow" msprop:Generator_UserTableName="Product" msprop:Generator_RowEvArgName="ProductRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="maker" msprop:Generator_ColumnVarNameInTable="columnmaker" msprop:Generator_ColumnPropNameInRow="maker" msprop:Generator_ColumnPropNameInTable="makerColumn" msprop:Generator_UserColumnName="maker">
@@ -383,6 +402,34 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="GG" msprop:Generator_TableClassName="GGDataTable" msprop:Generator_TableVarName="tableGG" msprop:Generator_TablePropName="GG" msprop:Generator_RowDeletingName="GGRowDeleting" msprop:Generator_RowChangingName="GGRowChanging" msprop:Generator_RowEvHandlerName="GGRowChangeEventHandler" msprop:Generator_RowDeletedName="GGRowDeleted" msprop:Generator_UserTableName="GG" msprop:Generator_RowChangedName="GGRowChanged" msprop:Generator_RowEvArgName="GGRowChangeEvent" msprop:Generator_RowClassName="GGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="maker" msprop:Generator_ColumnVarNameInTable="columnmaker" msprop:Generator_ColumnPropNameInRow="maker" msprop:Generator_ColumnPropNameInTable="makerColumn" msprop:Generator_UserColumnName="maker">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_UserColumnName="model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -404,9 +451,9 @@ SELECT maker, model, type FROM Product WHERE (model = @model)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Laptop_product" msdata:parent="Product" msdata:child="Laptop" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="Laptop" msprop:Generator_ChildPropName="GetLaptopRows" msprop:Generator_UserRelationName="FK_Laptop_product" msprop:Generator_RelationVarName="relationFK_Laptop_product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_pc_product" msdata:parent="Product" msdata:child="PC" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="PC" msprop:Generator_ChildPropName="GetPCRows" msprop:Generator_UserRelationName="FK_pc_product" msprop:Generator_RelationVarName="relationFK_pc_product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_printer_product" msdata:parent="Product" msdata:child="Printer" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="Printer" msprop:Generator_ChildPropName="GetPrinterRows" msprop:Generator_UserRelationName="FK_printer_product" msprop:Generator_RelationVarName="relationFK_printer_product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
+      <msdata:Relationship name="FK_Laptop_product" msdata:parent="Product" msdata:child="Laptop" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="Laptop" msprop:Generator_ChildPropName="GetLaptopRows" msprop:Generator_UserRelationName="FK_Laptop_product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_Laptop_product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_pc_product" msdata:parent="Product" msdata:child="PC" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="PC" msprop:Generator_ChildPropName="GetPCRows" msprop:Generator_UserRelationName="FK_pc_product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_pc_product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_printer_product" msdata:parent="Product" msdata:child="Printer" msdata:parentkey="model" msdata:childkey="model" msprop:Generator_UserChildTable="Printer" msprop:Generator_ChildPropName="GetPrinterRows" msprop:Generator_UserRelationName="FK_printer_product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_printer_product" msprop:Generator_UserParentTable="Product" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
